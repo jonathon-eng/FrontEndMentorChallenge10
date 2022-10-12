@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+:root{
+/* - Dark Blue (intro and email sign up background):  */
+--dBlue: 217 28% 15%;
+
+/* - Dark Blue (main background):  */
+--dBlueMain: 218 28% 13%;
+
+/* - Dark Blue (footer background):  */
+--dBlueFoot: 216 53% 9%;
+
+/* - Dark Blue (testimonials background):  */
+--dBlueAccent: 219 30% 18%;
+
+/* - Cyan (inside call-to-action gradient):  */
+--cyan: 176 68% 64%;
+
+/* - Blue (inside call-to-action gradient):  */
+--blue: 198 60% 50%;
+
+/* - Light Red (error):  */
+--red: 0 100% 63%;
+
+/* - White:  */
+--white: 0 0% 100%;
+
+
+
+background: linear-gradient(
+    to bottom,
+    hsl(var(--dBlue)) 0%,
+    hsl(var(--dBlue)) 10%,
+    hsl(var(--dBlueMain)) 10%,
+    hsl(var(--dBlueMain)) 80%,
+    hsl(var(--dBlueFoot)) 90%,
+    hsl(var(--dBlueFoot)) 100%
+
+);
+
+color: white;
+font-family: var(--ff-body);
+font-weight: 400;
+padding: 1rem;
+text-align: center;
+
+
+
+--ff-body: 'Open Sans', sans-serif;
+--ff-other: 'Raleway', sans-serif;
+
+
+}
+
+
+
+.logo {
+    /* clamp: takes three values. Min Value, growth, Max. Value  */
+    margin: 1rem clamp(1.5rem, 5vw , 2rem);
+}
+
+.primary-header {
+justify-content: space-between;
+align-items: center;
+
+}
+
+.primary-navigation {
+    -gap: clamp(1.5rem, 5vw , 3.5rem);
+    --underline-gap: 2rem;
+    list-style: none;
+    margin:0;
+    padding: 0;
+        
+}
+
+
+
+.primary-navigation a {
+    text-decoration: none;
+    font-family: var(--ff-other);
+    font-weight: 400;
+    color: hsl(0, 0%, 70%);
+}
+
+.primary-navigation a:hover{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: var(--gap, 1rem);
+}
+
+.err{
+    color: hsl(var(--red));
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.illustrations {
+    width: 80%;
+    justify-self: center;
+}
+
+p{
+    line-height: 27px;
+}
+
+.row > p {
+    margin-block: .5rem;
+}
+
+.row > p > a {
+    line-height: 0px;
+    text-decoration: none;
+    color: hsl(var(--white));
+    margin-block: 0rem;
+}
+
+.mainHeader{
+    font-size: 2rem;
+}
+
+.row > p > a:hover{
+    font-weight: 700;
+}
+
+h2 {
+    font-family: var(--ff-other);
+    font-weight: 600;
+    line-height: 35px;
+    font-size: 1.5rem;
+    padding:0;
+}
+
+.text-align{
+    text-align: left;
+    justify-content: left;
+}
+
+.link {
+    color: hsl(var(--cyan));
+    text-decoration: none;
+}
+
+
+
+
+button {
+    min-width: 60%;
+    max-width: 80%;
+    margin-top: 1rem;
+    padding-block: .8rem;
+    border-radius: 30px;
+    border: none;
+    background-color: hsl(var(--cyan));
+    color: hsl(var(--white));
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(var(--cyan)/.8);
+}
+
+.section{
+    margin-bottom: 5rem;
+}
+
+.quotes{
+
+}
+
+.testimonials{
+    text-align: left;
+    margin-inline: 1rem;
+    margin-bottom: 10rem;
+    
+}
+
+.card{
+    background-color: hsl(var(--dBlueAccent));
+    font-size: .90rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 8px 10px 5px -2px rgba(0,0,0,0.2);
+}
+
+.card > div > img {
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.name {
+    font-weight: 700;
+}
+
+.cardBottom {
+padding: 0;
+align-items: top;
+justify-content: top;
+}
+
+
+.accessCard{
+    background-color: hsl(var(--dBlue));
+    padding: 2rem 2rem 3rem 2rem;
+    margin-inline: auto;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    box-shadow: 8px 10px 5px -2px rgba(0,0,0,0.2);
+}
+
+.accessCard > form {
+    width: 100%;
+}
+
+.accessCard > form > input[type=submit] {
+    width: 100%;
+    margin-top: 1rem;
+    padding-block: 1rem;
+    border-radius: 30px;
+    border: none;
+    background-color: hsl(var(--cyan));
+    color: hsl(var(--white));
+    cursor: pointer;
+}
+
+.accessCard > form > input[type=submit]:hover{
+    background-color: hsl(var(--cyan)/.8);
+}
+
+.accessCard > form > input[type=text] {
+    border: none;
+    border-radius: 30px;
+    margin-top: 1rem;
+    width: 100%;
+    width: 100%;
+    padding-left: 2rem;
+    padding-block: 1rem;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+
+
+
+footer {
+    text-align: left;
+}
+
+.social{
+    margin-block: 5.5rem;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    
+}
+
+.social > a {
+    color: white;
+    padding: .5rem;
+    border: 1px solid white;
+    font-size: 1rem;
+    width: 20px;
+    height: 20px;
+    padding: 6px;
+    border-radius: 50%;
+    text-align: center;
+   
+}
+
+
+@media screen and (min-width: 600px) {
+    :root{
+     
+    }
+
+    .illustrations{
+        min-width: 40%;
+    
+    }
+
+   
+    .mainSection{
+        width: 70%;
+        margin-inline: auto;
+   
+    }
+
+    .deskFlex{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 1rem;
+        gap: var(--gap, 4rem);
+        justify-content: center;
+    }
+
+    .deskFlex > div > img {
+        max-width: 20%;
+        align-self: center;
+    }
+
+    .deskFlex > .section {
+        display: flex; 
+        flex-basis: calc(40%);  
+        justify-content: center;
+        flex-direction: column;
+    }
+    .flex {
+        margin-inline: 4rem;
+        padding-inline: 4rem;
+    }
+
+    .flex1 {
+        display: flex;
+        gap: var(--gap, 1rem);
+        justify-content:space-between;
+    }
+
+    .primary-header {
+        margin-inline: 0;
+        padding-inline: 0;
+
+        
+        }
+
+    .illusSection{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+    }
+
+    .text-align {
+        width: 50%;
+    }
+
+    .text-align:hover{
+        color: white;
+    }
+
+    .text-align > a:hover{
+        color: white;
+        text-decoration: underline;
+    }
+
+
+
+    .testimonials{
+        display: flex;
+        gap: 1rem;
+        margin: 3rem;
+    }
+
+    .card> * {
+        justify-items: left;
+        text-align: left;
+        
+        margin-inline: 0rem;
+        padding-inline: 0rem;
+    }
+
+    .footerContent{
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+align-items: center top;
+
+
+        
+    }
+
+    .contactUs{
+        width: 50%
+    }
+
+    .social{
+        margin-inline: 0rem;
+        padding-inline: 0rem;
+    }
+
+    a{
+        align-content: top;
+    }
+
+    .row {
+        margin-bottom: .3rem;
+        gap: var(--gap, 1rem);
+    }
+
+    .social > a:hover{
+        color: hsl(var(--cyan));   
+        border-color: hsl(var(--cyan));     
+    }
+
+    .iconTag{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .iconTag > img {
+        padding : 1rem;
+    }
+   
+
+    .attribution {
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+    }
+
+    .accessCard{
+        max-width: 40%;
+    }
+
+    
+
+
+}
+
+@media screen and (min-width: 800px){
+    .accessCard > form{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+    
+    .accessCard > form > input[type=text]{
+        max-width: 70%;
+    }
+    
+    .accessCard > form > input[type=submit]{
+        max-width: 30%;
+    }
+
+}
+
